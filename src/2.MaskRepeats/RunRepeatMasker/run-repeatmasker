@@ -1,0 +1,27 @@
+#!/bin/bash
+
+################################
+######Austin Hammond############
+################################
+
+infile=$1
+
+lib=/path/to/repeat/library
+
+nam=$(echo $infile | awk 'BEGIN{FS="/"};{print $NF}')
+
+mkdir -p ${nam}-rm-out
+
+/usr/bin/time -p -o ${nam}-rm-out/${nam}.rm.time RepeatMasker -lib $lib \
+	-dir ${nam}-rm-out \
+	-pa 23 \
+	-engine ncbi \
+	-noisy \
+	-frag 10000000 \
+	-lcambig \
+	-gccalc \
+	-xsmall \
+	-poly \
+	-gff \
+	-excln \
+	$infile

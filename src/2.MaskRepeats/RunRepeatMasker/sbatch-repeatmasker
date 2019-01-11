@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# numbers cluster /tmp is 200G SSD
+export TMPDIR=/tmp
+
+./run-repeatmasker $1

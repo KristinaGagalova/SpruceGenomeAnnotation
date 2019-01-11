@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# file of files
+infile=/list/of/path/files
+
+while read line; do
+    echo "sbatch sbatch-repeatmasker $line"
+    nohup bash ./nohup-repeatmasker $line&
+    sleep 1
+done < $infile

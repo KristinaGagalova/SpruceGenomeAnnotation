@@ -1,7 +1,8 @@
 # Spruce Genome Annotation
 
-Annotate spruce draf genome assembly.     
+Annotate spruce draft genome assembly.     
 
+General overview
 * MAKER is run in several iterations for refinement and results improvement
 * The gene models are trained for each species through an initial run of MAKER. Species-specific evidence is used for each model
 * The models are used for the first pass of gene prediction
